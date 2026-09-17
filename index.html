@@ -8,206 +8,204 @@
 <link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#17140f;
-  --ink-soft:#544e46;
-  --paper:#fbfaf7;
-  --paper-2:#f1ece3;
-  --char:#1d1a15;      /* charcoal — dark buttons, headings */
-  --char-deep:#120f0b; /* near-black — dark sections */
-  --orange:#fb6e05;    /* brand primary */
+  --ink:#2b2622;        /* warm charcoal — body text */
+  --ink-soft:#6f6a63;   /* muted captions / meta */
+  --paper:#fbf8f5;      /* warm cream background */
+  --paper-2:#f4eee6;    /* soft sand — alternating sections */
+  --surface:#ffffff;    /* cards */
+  --char:#241d17;       /* warm near-black — dark sections */
+  --char-deep:#191410;
+  --orange:#fb6e05;     /* brand primary */
   --orange-lt:#ff8f3c;
   --orange-soft:#ffb877;
-  --line:rgba(0,0,0,.10);
-  --shadow:0 18px 50px -22px rgba(30,20,8,.4);
-  --radius:16px;
+  --line:rgba(35,25,15,.10);
+  --shadow:0 24px 60px -32px rgba(40,25,10,.42);
+  --shadow-soft:0 2px 24px rgba(40,25,10,.06);
+  --radius:18px;
   --maxw:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.08;font-weight:600;letter-spacing:.01em}
-.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Playfair Display',serif;font-weight:600;line-height:1.15;letter-spacing:-.01em;color:var(--ink)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.eyebrow{font-family:'Oswald';font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Oswald';font-weight:600;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;padding:.8rem 1.6rem;border-radius:8px;transition:.25s;cursor:pointer;border:none;white-space:nowrap}
+.eyebrow{font-family:'Inter',sans-serif;font-weight:600;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--orange)}
+
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.94rem;letter-spacing:.01em;padding:.85rem 1.55rem;border-radius:10px;transition:.25s;cursor:pointer;border:none;white-space:nowrap}
+.btn .ar{transition:transform .25s}
+.btn:hover .ar{transform:translateX(3px)}
 .btn-primary{background:var(--orange);color:#fff}
-.btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px);box-shadow:0 12px 28px -12px rgba(251,110,5,.6)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
 .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
 .btn-dark{background:var(--char);color:#fff}
 .btn-dark:hover{background:#000;transform:translateY(-2px)}
-
-/* skyline */
-.skyline{display:block;width:100%;height:auto}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-outline:hover{border-color:var(--orange);color:var(--orange)}
 
 /* crisis banner */
-.crisis{background:#000;color:#fff;font-size:.86rem;text-align:center;padding:.55rem 24px}
-.crisis strong{color:var(--orange-soft)}
-.crisis a{border-bottom:1px solid rgba(255,255,255,.4)}
+.crisis{background:var(--char-deep);color:rgba(255,255,255,.86);font-size:.86rem;text-align:center;padding:.6rem 24px;letter-spacing:.01em}
+.crisis strong{color:var(--orange-soft);font-weight:600}
+.crisis a{border-bottom:1px solid rgba(255,255,255,.35)}
+.crisis a:hover{color:#fff}
 
 /* nav */
-header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:50;background:rgba(251,248,245,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
 .brand{display:flex;align-items:center;gap:.85rem;min-width:0}
 .brand img{height:44px;width:auto;flex:none}
-.brand .sub{border-left:2px solid var(--orange);padding-left:.85rem;font-family:'Oswald';font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);line-height:1.25;max-width:150px}
-.navlinks{display:flex;align-items:center;gap:1.9rem}
-.navlinks a{font-family:'Oswald';font-weight:500;font-size:.98rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);transition:.2s}
+.brand .sub{border-left:2px solid var(--orange);padding-left:.85rem;font-family:'Inter',sans-serif;font-weight:600;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);line-height:1.3;max-width:150px}
+.navlinks{display:flex;align-items:center;gap:2rem}
+.navlinks a{font-family:'Inter',sans-serif;font-weight:500;font-size:.95rem;color:var(--ink);transition:.2s}
 .navlinks a:hover{color:var(--orange)}
-.navcta{display:flex;align-items:center;gap:1.1rem}
-.navphone{font-family:'Oswald';font-weight:600;color:var(--char);font-size:1rem}
+.navcta{display:flex;align-items:center;gap:1.25rem}
+.navphone{font-family:'Inter',sans-serif;font-weight:600;color:var(--ink);font-size:.98rem}
+.navphone:hover{color:var(--orange)}
 @media(max-width:1000px){.navlinks{display:none}.navphone{display:none}.brand .sub{display:none}}
 
 /* hero */
-.hero{position:relative;background:linear-gradient(160deg,#000 0%,var(--char-deep) 45%,#241d13 100%);color:#fff;overflow:hidden}
+.hero{position:relative;background:linear-gradient(160deg,#1a140f 0%,var(--char) 48%,#2c2318 100%);color:#fff;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 84% 8%,rgba(251,110,5,.35),transparent 40%),
-  radial-gradient(circle at 4% 96%,rgba(251,110,5,.14),transparent 42%);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:84px 24px 92px}
+  radial-gradient(circle at 84% 6%,rgba(251,110,5,.28),transparent 42%),
+  radial-gradient(circle at 2% 98%,rgba(251,110,5,.12),transparent 44%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:88px 24px 104px}
 .hero-copy .eyebrow{color:var(--orange-soft)}
-.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin:1rem 0 1.3rem;line-height:.98}
-.hero h1 em{font-style:normal;color:var(--orange)}
-.hero p.lead{font-size:1.18rem;color:rgba(255,255,255,.82);max-width:34rem;margin-bottom:2.1rem}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.3rem);margin:1.1rem 0 1.4rem;line-height:1.06;font-weight:700}
+.hero h1 em{font-style:italic;color:var(--orange);font-weight:600}
+.hero p.lead{font-size:1.16rem;color:rgba(255,255,255,.82);max-width:34rem;margin-bottom:2.2rem;line-height:1.75}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-.hero-note{margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.72);display:flex;align-items:center;gap:.5rem}
+.hero-note{margin-top:1.6rem;font-size:.92rem;color:rgba(255,255,255,.72);display:flex;align-items:center;gap:.55rem}
 .hero-note b{color:#fff;font-weight:600}
 .hero-visual{position:relative}
-.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(6px);border-radius:18px;padding:30px}
-.hero-card h3{font-size:1.35rem;color:#fff;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.02em}
-.hero-card p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.4rem}
-.hero-hours{display:flex;flex-direction:column;gap:.7rem}
-.hr-row{display:flex;justify-content:space-between;align-items:center;font-size:.92rem;padding-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(6px);border-radius:20px;padding:32px}
+.hero-card h3{font-size:1.4rem;color:#fff;margin-bottom:.35rem}
+.hero-card p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem;font-family:'Inter',sans-serif}
+.hero-hours{display:flex;flex-direction:column;gap:.75rem}
+.hr-row{display:flex;justify-content:space-between;align-items:center;font-size:.92rem;padding-bottom:.75rem;border-bottom:1px solid rgba(255,255,255,.12)}
 .hr-row:last-child{border-bottom:none;padding-bottom:0}
 .hr-row span:first-child{color:rgba(255,255,255,.78)}
 .hr-row span:last-child{font-weight:600;color:var(--orange-soft)}
 .pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:pulse 2s infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
 .hero-skyline{position:relative;line-height:0}
-.hero-skyline svg{width:100%;height:auto;display:block;color:#000}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding:56px 24px 64px}}
+.hero-skyline svg{width:100%;height:auto;display:block}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding:60px 24px 76px}}
 
 /* trust */
 .trust{background:var(--paper-2);border-bottom:1px solid var(--line)}
-.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding:22px 24px}
-.trust-item{display:flex;align-items:center;gap:.6rem;font-family:'Oswald';font-weight:500;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:22px;padding:24px}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-family:'Inter',sans-serif;font-weight:500;font-size:.92rem;color:var(--ink)}
 .trust-item svg{flex:none;color:var(--orange)}
 
 /* sections */
-section{padding:88px 0}
-.sec-head{max-width:44rem;margin-bottom:52px}
+section{padding:96px 0}
+.sec-head{max-width:44rem;margin-bottom:56px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-head h2{font-size:clamp(2.1rem,4.3vw,3.2rem);margin:.7rem 0 1rem;text-transform:uppercase;line-height:1}
-.sec-head p{font-size:1.1rem;color:var(--ink-soft);font-family:'Inter'}
+.sec-head h2{font-size:clamp(2rem,4vw,3rem);margin:.8rem 0 1rem;line-height:1.12}
+.sec-head p{font-size:1.1rem;color:var(--ink-soft)}
 
 /* about */
-.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.about-copy h2{font-size:clamp(2.1rem,4.2vw,3rem);margin:.6rem 0 1.2rem;text-transform:uppercase;line-height:1}
-.about-copy p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:1.2rem}
-.about-copy p:first-of-type{font-size:1.18rem;color:var(--ink)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.about-copy h2{font-size:clamp(2rem,4vw,2.9rem);margin:.7rem 0 1.3rem;line-height:1.12}
+.about-copy p{color:var(--ink-soft);font-size:1.04rem;margin-bottom:1.2rem}
+.about-copy p:first-of-type{font-size:1.16rem;color:var(--ink)}
+.about-copy strong{color:var(--ink);font-weight:600}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.stat{background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
-.stat b{display:block;font-family:'Anton';font-size:2.8rem;font-weight:400;color:var(--char);line-height:.9}
-.stat span{display:block;margin-top:.6rem;font-size:.92rem;color:var(--ink-soft)}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow-soft)}
+.stat b{display:block;font-family:'Playfair Display',serif;font-size:2.9rem;font-weight:700;color:var(--ink);line-height:1}
+.stat span{display:block;margin-top:.7rem;font-size:.92rem;color:var(--ink-soft)}
 .stat.accent{background:linear-gradient(155deg,var(--char),#000);border:none}
 .stat.accent b{color:var(--orange)}
 .stat.accent span{color:rgba(255,255,255,.82)}
-@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:40px}}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:44px}}
 
 /* services */
-.services{background:var(--char-deep);color:#fff;position:relative;overflow:hidden}
-.services::before{content:"";position:absolute;top:-30%;right:-8%;width:55%;height:110%;background:radial-gradient(circle,rgba(251,110,5,.22),transparent 68%)}
-.services .sec-head h2{color:#fff}
-.services .sec-head p{color:rgba(255,255,255,.78)}
-.cards{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px 28px;transition:.3s}
-.card:hover{background:rgba(255,255,255,.09);transform:translateY(-4px);border-color:rgba(251,110,5,.5)}
-.card .ico{width:52px;height:52px;border-radius:12px;background:rgba(251,110,5,.16);display:grid;place-items:center;margin-bottom:20px;color:var(--orange)}
-.card h3{font-size:1.35rem;color:#fff;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.02em}
-.card p{font-size:.96rem;color:rgba(255,255,255,.74);margin-bottom:1rem}
-.card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
-.card li{font-size:.9rem;color:rgba(255,255,255,.85);display:flex;gap:.5rem;align-items:flex-start}
-.card li::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--orange);margin-top:.5rem;flex:none}
+.services{background:var(--paper-2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px;transition:.3s;box-shadow:var(--shadow-soft)}
+.card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:rgba(251,110,5,.35)}
+.card .ico{width:54px;height:54px;border-radius:14px;background:rgba(251,110,5,.12);display:grid;place-items:center;margin-bottom:22px;color:var(--orange)}
+.card h3{font-size:1.35rem;margin-bottom:.7rem}
+.card p{font-size:.96rem;color:var(--ink-soft);margin-bottom:1.1rem;font-family:'Inter',sans-serif}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+.card li{font-size:.9rem;color:var(--ink);display:flex;gap:.6rem;align-items:flex-start;font-family:'Inter',sans-serif}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--orange);margin-top:.55rem;flex:none}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.cards{grid-template-columns:1fr}}
 
 /* care */
-.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.level{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;transition:.25s}
-.level:hover{border-color:var(--orange);box-shadow:var(--shadow)}
-.level .num{font-family:'Oswald';font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.12em}
-.level h3{font-size:1.3rem;margin:.5rem 0 .6rem;color:var(--char);text-transform:uppercase;letter-spacing:.02em}
-.level p{font-size:.95rem;color:var(--ink-soft)}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.level{border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;background:var(--surface);transition:.25s;box-shadow:var(--shadow-soft)}
+.level:hover{border-color:var(--orange);box-shadow:var(--shadow);transform:translateY(-3px)}
+.level .num{font-family:'Inter',sans-serif;font-size:.74rem;font-weight:700;color:var(--orange);letter-spacing:.16em}
+.level h3{font-size:1.3rem;margin:.6rem 0 .7rem}
+.level p{font-size:.95rem;color:var(--ink-soft);font-family:'Inter',sans-serif}
 @media(max-width:820px){.levels{grid-template-columns:1fr}}
 
 /* wellness */
-.wellness{background:linear-gradient(160deg,var(--paper-2),var(--paper))}
+.wellness{background:var(--paper-2)}
 .pills{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:52rem;margin:0 auto}
-.pill{background:#fff;border:1px solid var(--line);border-radius:100px;padding:.7rem 1.35rem;font-family:'Oswald';font-weight:500;font-size:.95rem;letter-spacing:.02em;color:var(--char);display:flex;align-items:center;gap:.55rem;transition:.2s}
+.pill{background:var(--surface);border:1px solid var(--line);border-radius:100px;padding:.72rem 1.4rem;font-family:'Inter',sans-serif;font-weight:500;font-size:.94rem;color:var(--ink);display:flex;align-items:center;gap:.6rem;transition:.2s;box-shadow:var(--shadow-soft)}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--orange);flex:none;transition:.2s}
 .pill:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
-.pill span{font-size:1.1rem}
+.pill:hover::before{background:#fff}
 
 /* start */
-.start{background:var(--char);color:#fff}
-.start .sec-head h2{color:#fff}
-.start .sec-head p{color:rgba(255,255,255,.8)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.step .n{width:52px;height:52px;border-radius:12px;background:var(--orange);color:#fff;font-family:'Anton';font-size:1.5rem;display:grid;place-items:center;margin-bottom:18px}
-.step h3{font-size:1.35rem;color:#fff;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.02em}
-.step p{font-size:.96rem;color:rgba(255,255,255,.8)}
-@media(max-width:760px){.steps{grid-template-columns:1fr;gap:22px}}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+.step .n{width:56px;height:56px;border-radius:16px;background:rgba(251,110,5,.12);color:var(--orange);font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;display:grid;place-items:center;margin-bottom:20px}
+.step h3{font-size:1.35rem;margin-bottom:.6rem}
+.step p{font-size:.96rem;color:var(--ink-soft);font-family:'Inter',sans-serif}
+@media(max-width:760px){.steps{grid-template-columns:1fr;gap:24px}}
 
 /* quote */
-.quote{background:var(--paper);text-align:center}
-.quote blockquote{max-width:48rem;margin:0 auto;font-family:'Oswald';font-weight:500;font-size:clamp(1.5rem,3vw,2.15rem);color:var(--char);line-height:1.3;text-transform:uppercase;letter-spacing:.01em}
-.quote .barmark{display:inline-block;background:var(--orange);color:#000;font-family:'Anton';font-size:1.3rem;padding:.35rem 1rem;border-radius:6px;margin-bottom:24px;letter-spacing:.03em}
-.quote cite{display:block;margin-top:1.6rem;font-family:'Inter';font-style:normal;font-size:.95rem;color:var(--ink-soft);font-weight:500;text-transform:none}
+.quote{background:linear-gradient(160deg,var(--char),#000);color:#fff;text-align:center}
+.quote .qmark{font-family:'Playfair Display',serif;font-size:4rem;line-height:.6;color:var(--orange);display:block;margin-bottom:14px}
+.quote blockquote{max-width:48rem;margin:0 auto;font-family:'Playfair Display',serif;font-style:italic;font-weight:500;font-size:clamp(1.5rem,3vw,2.15rem);color:#fff;line-height:1.35}
+.quote cite{display:block;margin-top:1.8rem;font-family:'Inter',sans-serif;font-style:normal;font-size:.95rem;color:rgba(255,255,255,.7);font-weight:500}
 
 /* contact */
-.contact{background:var(--char-deep);color:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.contact .sec-head h2{color:#fff}
-.contact-info{display:flex;flex-direction:column;gap:1.4rem;margin-top:2rem}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
 .ci{display:flex;gap:1rem;align-items:flex-start}
-.ci .ico{width:46px;height:46px;border-radius:10px;background:rgba(251,110,5,.14);display:grid;place-items:center;color:var(--orange);flex:none}
-.ci b{display:block;font-family:'Oswald';font-size:1.05rem;color:#fff;margin-bottom:.15rem;text-transform:uppercase;letter-spacing:.03em}
-.ci p,.ci a{font-size:.95rem;color:rgba(255,255,255,.75)}
-.ci a:hover{color:var(--orange-soft)}
-.form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:34px}
-.form h3{color:#fff;font-size:1.5rem;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.02em}
-.form>p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.6rem}
-.field{margin-bottom:1.05rem}
-.field label{display:block;font-family:'Oswald';font-size:.82rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:.4rem}
-.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border-radius:9px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:'Inter';font-size:.95rem}
-.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
-.field select option{color:#17140f}
-.form .btn-primary{width:100%;justify-content:center;margin-top:.4rem}
-.form small{display:block;margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.55);text-align:center}
-
-@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+.ci .ico{width:48px;height:48px;border-radius:12px;background:rgba(251,110,5,.12);display:grid;place-items:center;color:var(--orange);flex:none}
+.ci b{display:block;font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);margin-bottom:.15rem}
+.ci p,.ci a{font-size:.95rem;color:var(--ink-soft);font-family:'Inter',sans-serif}
+.ci a:hover{color:var(--orange)}
+.form{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow-soft)}
+.form h3{font-size:1.5rem;margin-bottom:.4rem}
+.form>p{font-size:.92rem;color:var(--ink-soft);margin-bottom:1.7rem;font-family:'Inter',sans-serif}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.02em;color:var(--ink);margin-bottom:.45rem}
+.field input,.field select,.field textarea{width:100%;padding:.85rem 1rem;border-radius:10px;border:1px solid var(--line);background:#fdfbf9;color:var(--ink);font-family:'Inter',sans-serif;font-size:.95rem}
+.field input::placeholder,.field textarea::placeholder{color:#a89f95}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange);box-shadow:0 0 0 3px rgba(251,110,5,.12)}
+.form .btn-primary{width:100%;justify-content:center;margin-top:.5rem}
+.form small{display:block;margin-top:1rem;font-size:.78rem;color:var(--ink-soft);text-align:center;font-family:'Inter',sans-serif}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:44px}}
 
 /* map strip */
 .mapstrip{background:var(--paper-2)}
-.mapstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 24px;flex-wrap:wrap}
-.mapstrip h3{font-size:1.6rem;color:var(--char);text-transform:uppercase}
-.mapstrip p{color:var(--ink-soft);font-size:.98rem}
+.mapstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:40px 24px;flex-wrap:wrap}
+.mapstrip h3{font-size:1.6rem;color:var(--ink)}
+.mapstrip p{color:var(--ink-soft);font-size:.98rem;font-family:'Inter',sans-serif}
 
 /* footer */
-footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:relative}
+footer{background:var(--char-deep);color:rgba(255,255,255,.62);padding:64px 0 32px;position:relative}
 .foot-skyline{line-height:0}
-.foot-skyline svg{width:100%;height:auto;color:var(--orange);opacity:.9}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin:40px 0 44px}
-.foot-brand .fmark{display:inline-block;background:var(--orange);color:#000;font-family:'Anton';font-size:1.4rem;padding:.3rem .8rem;border-radius:6px;letter-spacing:.03em}
-.foot-brand p{margin-top:1.1rem;font-size:.92rem;max-width:20rem}
-.foot-col h4{font-family:'Oswald';font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:1.1rem;font-weight:600}
-.foot-col a,.foot-col p{display:block;font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:.6rem;transition:.2s}
+.foot-skyline svg{width:100%;height:auto;color:var(--orange);opacity:.85}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin:44px 0 46px}
+.foot-brand .fmark{display:inline-block;font-family:'Playfair Display',serif;font-weight:700;font-size:1.5rem;color:#fff;letter-spacing:.01em}
+.foot-brand .fmark span{color:var(--orange)}
+.foot-brand p{margin-top:1rem;font-size:.92rem;max-width:20rem;font-family:'Inter',sans-serif}
+.foot-col h4{font-family:'Inter',sans-serif;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:1.15rem;font-weight:600}
+.foot-col a,.foot-col p{display:block;font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:.6rem;transition:.2s;font-family:'Inter',sans-serif}
 .foot-col a:hover{color:#fff}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:rgba(255,255,255,.45)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:rgba(255,255,255,.45);font-family:'Inter',sans-serif}
 .foot-bottom .draft{color:var(--orange-soft)}
 @media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
@@ -250,10 +248,10 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
   <div class="wrap">
     <div class="hero-copy">
       <span class="eyebrow">Baltimore &middot; Pennsylvania Avenue</span>
-      <h1 class="display">Recovery starts here.<br><em>Community keeps you going.</em></h1>
+      <h1>Recovery starts here.<br><em>Community keeps you going.</em></h1>
       <p class="lead">A trusted West Baltimore nonprofit offering trauma-informed addiction recovery, mental health care, and whole-person wellness — meeting people where they are, with dignity and hope.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Start Your Recovery →</a>
+        <a href="#contact" class="btn btn-primary">Start your recovery <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="tel:4107282080" class="btn btn-ghost">Call 410-728-2080</a>
       </div>
       <div class="hero-note"><span class="pulse"></span> <b>Drop-ins welcome</b>&nbsp;— no appointment needed.</div>
@@ -273,7 +271,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
   </div>
   <!-- Baltimore skyline motif (echoes the Penn North logo) -->
   <div class="hero-skyline" aria-hidden="true">
-    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fbfaf7" d="M0,90 L0,60 L40,60 L40,44 L70,44 L70,60 L110,60 L110,30 L128,30 L128,18 L140,18 L140,30 L158,30 L158,60 L200,60 L200,48 L230,48 L230,26 L244,26 L244,14 L258,14 L258,26 L272,26 L272,48 L310,48 L310,38 L340,38 L340,56 L380,56 L380,22 L396,22 L396,8 L410,8 L410,22 L426,22 L426,56 L470,56 L470,42 L500,42 L500,60 L540,60 L540,34 L556,34 L556,50 L600,50 L600,40 L624,40 L624,20 L638,20 L638,40 L662,40 L662,58 L700,58 L700,30 L716,30 L716,16 L730,16 L730,30 L746,30 L746,58 L790,58 L790,46 L820,46 L820,28 L836,28 L836,46 L870,46 L870,60 L910,60 L910,36 L926,36 L926,22 L940,22 L940,36 L956,36 L956,60 L1000,60 L1000,48 L1030,48 L1030,26 L1044,26 L1044,12 L1058,12 L1058,26 L1072,26 L1072,48 L1110,48 L1110,40 L1140,40 L1140,58 L1180,58 L1180,30 L1196,30 L1196,44 L1240,44 L1240,54 L1280,54 L1280,32 L1296,32 L1296,18 L1310,18 L1310,32 L1326,32 L1326,54 L1370,54 L1370,46 L1400,46 L1400,60 L1440,60 L1440,90 Z"/></svg>
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="#f4eee6" d="M0,90 L0,60 L40,60 L40,44 L70,44 L70,60 L110,60 L110,30 L128,30 L128,18 L140,18 L140,30 L158,30 L158,60 L200,60 L200,48 L230,48 L230,26 L244,26 L244,14 L258,14 L258,26 L272,26 L272,48 L310,48 L310,38 L340,38 L340,56 L380,56 L380,22 L396,22 L396,8 L410,8 L410,22 L426,22 L426,56 L470,56 L470,42 L500,42 L500,60 L540,60 L540,34 L556,34 L556,50 L600,50 L600,40 L624,40 L624,20 L638,20 L638,40 L662,40 L662,58 L700,58 L700,30 L716,30 L716,16 L730,16 L730,30 L746,30 L746,58 L790,58 L790,46 L820,46 L820,28 L836,28 L836,46 L870,46 L870,60 L910,60 L910,36 L926,36 L926,22 L940,22 L940,36 L956,36 L956,60 L1000,60 L1000,48 L1030,48 L1030,26 L1044,26 L1044,12 L1058,12 L1058,26 L1072,26 L1072,48 L1110,48 L1110,40 L1140,40 L1140,58 L1180,58 L1180,30 L1196,30 L1196,44 L1240,44 L1240,54 L1280,54 L1280,32 L1296,32 L1296,18 L1310,18 L1310,32 L1326,32 L1326,54 L1370,54 L1370,46 L1400,46 L1400,60 L1440,60 L1440,90 Z"/></svg>
   </div>
 </section>
 
@@ -298,7 +296,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
         <p>Penn North Recovery, a program of Maryland Community Health Initiatives, has served the Pennsylvania Avenue community for more than two decades — helping individuals and families overcome substance use, mental health challenges, poverty, and homelessness.</p>
         <p>Our approach is <strong>trauma-informed and whole-person</strong>: we treat addiction and co-occurring mental health conditions together, then surround each person with the wellness, employment, and community support they need to stay well.</p>
         <p>Everyone who walks through our doors is met with respect — no matter where they are in their journey.</p>
-        <a href="#services" class="btn btn-dark" style="margin-top:.6rem">Explore Our Programs →</a>
+        <a href="#services" class="btn btn-dark" style="margin-top:.6rem">Explore our programs <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="stats reveal">
         <div class="stat accent"><b>25+</b><span>Years serving West Baltimore</span></div>
@@ -387,18 +385,18 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
       <p>Recovery is about more than stopping — it's about building a healthy, connected, hopeful life. These services come with every program.</p>
     </div>
     <div class="pills reveal">
-      <span class="pill"><span>🌿</span> Acupuncture</span>
-      <span class="pill"><span>🧘</span> Yoga &amp; Meditation</span>
-      <span class="pill"><span>🎨</span> Art Therapy</span>
-      <span class="pill"><span>🥗</span> Nutrition Classes</span>
-      <span class="pill"><span>🍎</span> Food Assistance</span>
-      <span class="pill"><span>💪</span> Fitness Equipment</span>
-      <span class="pill"><span>🧠</span> Healing Circles</span>
-      <span class="pill"><span>🚭</span> Smoking Cessation</span>
-      <span class="pill"><span>🩺</span> HIV/STD Testing</span>
-      <span class="pill"><span>🤝</span> Peer Support</span>
-      <span class="pill"><span>👐</span> Massage &amp; Bodywork</span>
-      <span class="pill"><span>🥋</span> Tai Chi</span>
+      <span class="pill">Acupuncture</span>
+      <span class="pill">Yoga &amp; Meditation</span>
+      <span class="pill">Art Therapy</span>
+      <span class="pill">Nutrition Classes</span>
+      <span class="pill">Food Assistance</span>
+      <span class="pill">Fitness Equipment</span>
+      <span class="pill">Healing Circles</span>
+      <span class="pill">Smoking Cessation</span>
+      <span class="pill">HIV/STD Testing</span>
+      <span class="pill">Peer Support</span>
+      <span class="pill">Massage &amp; Bodywork</span>
+      <span class="pill">Tai Chi</span>
     </div>
   </div>
 </section>
@@ -407,7 +405,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
 <section class="start" id="start">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow" style="color:var(--orange-soft)">Getting Started</span>
+      <span class="eyebrow">Getting Started</span>
       <h2>Three simple steps to help</h2>
       <p>No complicated forms. No judgment. Just support when you're ready.</p>
     </div>
@@ -416,15 +414,15 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
       <div class="step reveal"><div class="n">2</div><h3>Get assessed</h3><p>Our team completes a comprehensive, compassionate assessment to understand your needs and build a personalized plan.</p></div>
       <div class="step reveal"><div class="n">3</div><h3>Begin recovery</h3><p>Start treatment matched to your life, backed by wellness, employment, and community support every step of the way.</p></div>
     </div>
-    <div style="text-align:center;margin-top:48px" class="reveal"><a href="#contact" class="btn btn-primary">Take the First Step →</a></div>
+    <div style="text-align:center;margin-top:52px" class="reveal"><a href="#contact" class="btn btn-primary">Take the first step <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
   </div>
 </section>
 
 <!-- QUOTE -->
 <section class="quote">
   <div class="wrap reveal">
-    <span class="barmark">PENN NORTH</span>
-    <blockquote>"Helping individuals and communities overcome substance use, poverty, homelessness, and health inequities — restoring dignity, health, and hope."</blockquote>
+    <span class="qmark">&ldquo;</span>
+    <blockquote>Helping individuals and communities overcome substance use, poverty, homelessness, and health inequities — restoring dignity, health, and hope.</blockquote>
     <cite>— Penn North Recovery / Maryland Community Health Initiatives</cite>
   </div>
 </section>
@@ -437,7 +435,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
         <div class="sec-head" style="margin-bottom:0">
           <span class="eyebrow">Get In Touch</span>
           <h2>We're here whenever you're ready</h2>
-          <p style="color:rgba(255,255,255,.78)">Call, visit, or send a message. Every conversation is confidential and judgment-free.</p>
+          <p>Call, visit, or send a message. Every conversation is confidential and judgment-free.</p>
         </div>
         <div class="contact-info">
           <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><b>Call or Text</b><a href="tel:4107282080">410-728-2080</a></div></div>
@@ -450,15 +448,15 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
       <div class="form reveal">
         <h3>Request a callback</h3>
         <p>Fill this out and our intake team will reach out — usually the same day.</p>
-        <form onsubmit="event.preventDefault();this.querySelector('.done').style.display='block';this.querySelector('.btn').textContent='Sent ✓';">
+        <form onsubmit="event.preventDefault();this.querySelector('.done').style.display='block';this.querySelector('.btn').textContent='Sent';">
           <div class="field"><label>Your name</label><input type="text" placeholder="First name is fine" required></div>
           <div class="field"><label>Phone number</label><input type="tel" placeholder="(410) 000-0000" required></div>
           <div class="field"><label>How can we help?</label>
             <select><option>I'm seeking treatment for myself</option><option>I'm reaching out for a loved one</option><option>Employment / reentry support</option><option>Wellness &amp; community services</option><option>Something else</option></select>
           </div>
           <div class="field"><label>Anything you'd like us to know? (optional)</label><textarea rows="3" placeholder="Share as much or as little as you like"></textarea></div>
-          <button type="submit" class="btn btn-primary">Send Request</button>
-          <small class="done" style="display:none;color:var(--orange-soft)">Thank you — this is a demo form. Connect it to your intake system to go live.</small>
+          <button type="submit" class="btn btn-primary">Send request</button>
+          <small class="done" style="display:none;color:var(--orange)">Thank you — this is a demo form. Connect it to your intake system to go live.</small>
           <small>Confidential &middot; No obligation &middot; We respond quickly</small>
         </form>
       </div>
@@ -473,7 +471,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
       <h3>2410 Pennsylvania Avenue, Baltimore</h3>
       <p>In the heart of the Penn North community — right on the Metro line.</p>
     </div>
-    <a href="https://maps.google.com/?q=2410+Pennsylvania+Avenue+Suite+200+Baltimore+MD+21217" target="_blank" rel="noopener" class="btn btn-dark">Open in Google Maps →</a>
+    <a href="https://maps.google.com/?q=2410+Pennsylvania+Avenue+Suite+200+Baltimore+MD+21217" target="_blank" rel="noopener" class="btn btn-dark">Open in Google Maps <svg class="ar" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </div>
 
@@ -485,7 +483,7 @@ footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <span class="fmark">PENN NORTH</span>
+        <span class="fmark">PENN <span>NORTH</span></span>
         <p>Healing people and restoring community in West Baltimore for more than two decades.</p>
       </div>
       <div class="foot-col"><h4>Programs</h4><a href="#services">Addiction Treatment</a><a href="#services">Mental Health</a><a href="#services">Acudetox</a><a href="#services">Employment &amp; Reentry</a></div>
