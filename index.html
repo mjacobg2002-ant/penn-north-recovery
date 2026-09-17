@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Penn North Recovery | Healing People, Restoring Community — Baltimore</title>
+<meta name="description" content="Penn North Recovery is a Baltimore nonprofit providing trauma-informed, whole-person addiction recovery, mental health, and community wellness services. Drop-ins welcome. CARF accredited.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12211f;
+  --ink-soft:#3c4f4b;
+  --paper:#fbfaf5;
+  --paper-2:#f2efe4;
+  --teal:#0f5c52;
+  --teal-deep:#0a423b;
+  --teal-bright:#17897a;
+  --gold:#e0a13c;
+  --gold-soft:#f4d79b;
+  --clay:#c25b3a;
+  --line:rgba(15,92,82,.14);
+  --shadow:0 18px 50px -20px rgba(10,66,59,.35);
+  --radius:18px;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'Inter';font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.98rem;padding:.85rem 1.5rem;border-radius:100px;transition:.25s;cursor:pointer;border:none;white-space:nowrap}
+.btn-primary{background:var(--gold);color:var(--teal-deep)}
+.btn-primary:hover{background:#eeb054;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-dark{background:var(--teal);color:#fff}
+.btn-dark:hover{background:var(--teal-deep);transform:translateY(-2px)}
+
+/* ---- Crisis banner ---- */
+.crisis{background:var(--teal-deep);color:#fff;font-size:.86rem;text-align:center;padding:.55rem 24px}
+.crisis strong{color:var(--gold-soft)}
+.crisis a{border-bottom:1px solid rgba(255,255,255,.4)}
+
+/* ---- Nav ---- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,245,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:'Fraunces';font-weight:600;font-size:1.28rem;color:var(--teal-deep)}
+.mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(140deg,var(--teal-bright),var(--teal-deep));display:grid;place-items:center;color:var(--gold-soft);font-family:'Fraunces';font-weight:700;font-size:1.15rem;flex:none}
+.brand small{display:block;font-family:'Inter';font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:-2px}
+.navlinks{display:flex;align-items:center;gap:2rem}
+.navlinks a{font-size:.94rem;font-weight:500;color:var(--ink-soft);transition:.2s}
+.navlinks a:hover{color:var(--teal)}
+.navcta{display:flex;align-items:center;gap:1rem}
+.navphone{font-weight:600;color:var(--teal-deep);font-size:.95rem}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--teal-deep)}
+@media(max-width:940px){
+  .navlinks{display:none}
+  .navphone{display:none}
+}
+
+/* ---- Hero ---- */
+.hero{position:relative;background:linear-gradient(160deg,var(--teal-deep) 0%,var(--teal) 55%,#0d6a5e 100%);color:#fff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 82% 12%,rgba(224,161,60,.22),transparent 42%),
+  radial-gradient(circle at 8% 90%,rgba(23,137,122,.5),transparent 45%);
+  pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:88px 24px 96px}
+.hero-copy .eyebrow{color:var(--gold-soft)}
+.hero h1{font-size:clamp(2.5rem,5.2vw,4rem);margin:1rem 0 1.3rem;font-weight:600}
+.hero h1 em{font-style:normal;color:var(--gold-soft)}
+.hero p.lead{font-size:1.18rem;color:rgba(255,255,255,.85);max-width:34rem;margin-bottom:2.2rem}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.hero-note{margin-top:1.6rem;font-size:.9rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:.5rem}
+.hero-note b{color:#fff;font-weight:600}
+.hero-visual{position:relative}
+.hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:22px;padding:30px}
+.hero-card h3{font-size:1.15rem;color:#fff;margin-bottom:.3rem}
+.hero-card p{font-size:.92rem;color:rgba(255,255,255,.75);margin-bottom:1.4rem}
+.hero-hours{display:flex;flex-direction:column;gap:.7rem}
+.hr-row{display:flex;justify-content:space-between;align-items:center;font-size:.92rem;padding-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.12)}
+.hr-row:last-child{border-bottom:none;padding-bottom:0}
+.hr-row span:first-child{color:rgba(255,255,255,.8)}
+.hr-row span:last-child{font-weight:600;color:var(--gold-soft)}
+.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:#6ee7a8;box-shadow:0 0 0 0 rgba(110,231,168,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,231,168,.6)}70%{box-shadow:0 0 0 10px rgba(110,231,168,0)}100%{box-shadow:0 0 0 0 rgba(110,231,168,0)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding:60px 24px 70px}}
+
+/* ---- Trust strip ---- */
+.trust{background:var(--paper-2);border-bottom:1px solid var(--line)}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding:22px 24px}
+.trust-item{display:flex;align-items:center;gap:.7rem;font-size:.9rem;font-weight:500;color:var(--ink-soft)}
+.trust-item svg{flex:none;color:var(--teal)}
+
+/* ---- Section base ---- */
+section{padding:88px 0}
+.sec-head{max-width:44rem;margin-bottom:52px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);margin:.8rem 0 1rem}
+.sec-head p{font-size:1.1rem;color:var(--ink-soft)}
+
+/* ---- About / stats ---- */
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.about-copy p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:1.2rem}
+.about-copy p:first-of-type{font-size:1.18rem;color:var(--ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.stat{background:linear-gradient(160deg,#fff,var(--paper-2));border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:'Fraunces';font-size:2.5rem;font-weight:600;color:var(--teal);line-height:1}
+.stat span{display:block;margin-top:.5rem;font-size:.92rem;color:var(--ink-soft)}
+.stat.accent{background:linear-gradient(160deg,var(--teal),var(--teal-deep));border:none}
+.stat.accent b{color:var(--gold-soft)}
+.stat.accent span{color:rgba(255,255,255,.82)}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---- Services ---- */
+.services{background:var(--teal-deep);color:#fff;position:relative;overflow:hidden}
+.services::before{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:120%;background:radial-gradient(circle,rgba(23,137,122,.4),transparent 70%)}
+.services .sec-head h2{color:#fff}
+.services .sec-head p{color:rgba(255,255,255,.78)}
+.services .sec-head .eyebrow{color:var(--gold-soft)}
+.cards{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px 28px;transition:.3s}
+.card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.card .ico{width:52px;height:52px;border-radius:14px;background:rgba(224,161,60,.16);display:grid;place-items:center;margin-bottom:20px;color:var(--gold-soft)}
+.card h3{font-size:1.25rem;color:#fff;margin-bottom:.6rem}
+.card p{font-size:.96rem;color:rgba(255,255,255,.76);margin-bottom:1rem}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
+.card li{font-size:.9rem;color:rgba(255,255,255,.85);display:flex;gap:.5rem;align-items:flex-start}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:.55rem;flex:none}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.cards{grid-template-columns:1fr}}
+
+/* ---- Levels of care ---- */
+.care{background:var(--paper)}
+.levels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.level{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;transition:.25s;position:relative}
+.level:hover{border-color:var(--teal-bright);box-shadow:var(--shadow)}
+.level .num{font-family:'Fraunces';font-size:.85rem;font-weight:600;color:var(--gold);letter-spacing:.05em}
+.level h3{font-size:1.2rem;margin:.5rem 0 .6rem;color:var(--teal-deep)}
+.level p{font-size:.95rem;color:var(--ink-soft)}
+@media(max-width:820px){.levels{grid-template-columns:1fr}}
+
+/* ---- Wellness pills ---- */
+.wellness{background:linear-gradient(160deg,var(--paper-2),var(--paper))}
+.pills{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:52rem;margin:0 auto}
+.pill{background:#fff;border:1px solid var(--line);border-radius:100px;padding:.75rem 1.4rem;font-size:.95rem;font-weight:500;color:var(--teal-deep);display:flex;align-items:center;gap:.55rem;transition:.2s}
+.pill:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.pill span{font-size:1.1rem}
+
+/* ---- Steps ---- */
+.start{background:var(--teal);color:#fff}
+.start .sec-head h2{color:#fff}
+.start .sec-head p{color:rgba(255,255,255,.8)}
+.start .sec-head .eyebrow{color:var(--gold-soft)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
+.step{position:relative;padding-left:0}
+.step .n{width:44px;height:44px;border-radius:12px;background:var(--gold);color:var(--teal-deep);font-family:'Fraunces';font-weight:700;font-size:1.2rem;display:grid;place-items:center;margin-bottom:18px}
+.step h3{font-size:1.2rem;color:#fff;margin-bottom:.5rem}
+.step p{font-size:.96rem;color:rgba(255,255,255,.8)}
+@media(max-width:760px){.steps{grid-template-columns:1fr;gap:22px}}
+
+/* ---- Quote ---- */
+.quote{background:var(--paper);text-align:center}
+.quote blockquote{max-width:48rem;margin:0 auto;font-family:'Fraunces';font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;color:var(--teal-deep);line-height:1.35}
+.quote .mark{width:56px;height:56px;margin:0 auto 24px;font-size:1.6rem}
+.quote cite{display:block;margin-top:1.6rem;font-family:'Inter';font-style:normal;font-size:.95rem;color:var(--ink-soft);font-weight:500}
+
+/* ---- Contact ---- */
+.contact{background:var(--teal-deep);color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact .sec-head h2{color:#fff}
+.contact-info{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
+.ci{display:flex;gap:1rem;align-items:flex-start}
+.ci .ico{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--gold-soft);flex:none}
+.ci b{display:block;font-size:1rem;color:#fff;margin-bottom:.15rem}
+.ci p,.ci a{font-size:.95rem;color:rgba(255,255,255,.75)}
+.ci a:hover{color:var(--gold-soft)}
+.form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:34px}
+.form h3{color:#fff;font-size:1.35rem;margin-bottom:.4rem}
+.form>p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.6rem}
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:.4rem}
+.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:'Inter';font-size:.95rem}
+.field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field select option{color:#12211f}
+.form .btn-primary{width:100%;justify-content:center;margin-top:.4rem}
+.form small{display:block;margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.55);text-align:center}
+@media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---- Map strip ---- */
+.mapstrip{background:var(--paper-2)}
+.mapstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 24px;flex-wrap:wrap}
+.mapstrip h3{font-size:1.4rem;color:var(--teal-deep)}
+.mapstrip p{color:var(--ink-soft);font-size:.98rem}
+
+/* ---- Footer ---- */
+footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.foot-brand .brand{color:#fff}
+.foot-brand .mark{background:linear-gradient(140deg,var(--teal-bright),var(--teal))}
+.foot-brand p{margin-top:1.1rem;font-size:.92rem;max-width:20rem}
+.foot-col h4{font-family:'Inter';font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.1rem;font-weight:600}
+.foot-col a,.foot-col p{display:block;font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:.6rem;transition:.2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:rgba(255,255,255,.45)}
+.foot-bottom .draft{color:var(--gold-soft)}
+@media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<!-- Crisis banner -->
+<div class="crisis">
+  In crisis or need help now? Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) &middot; Maryland Crisis: <strong>211</strong> &middot; Penn North: <a href="tel:4107282080">410-728-2080</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand">
+        <span class="mark">PN</span>
+        <span>Penn North Recovery<small>Maryland Community Health Initiatives</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#care">Levels of Care</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#start">Get Started</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="navcta">
+        <a href="tel:4107282080" class="navphone">410-728-2080</a>
+        <a href="#contact" class="btn btn-dark">Get Help Today</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top" style="padding:0">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Baltimore &middot; Since 1998</span>
+      <h1>Recovery starts here. <em>Community keeps you going.</em></h1>
+      <p class="lead">A trusted West Baltimore nonprofit offering trauma-informed addiction recovery, mental health care, and whole-person wellness — meeting people where they are, with dignity and hope.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Start Your Recovery →</a>
+        <a href="tel:4107282080" class="btn btn-ghost">📞 Call 410-728-2080</a>
+      </div>
+      <div class="hero-note"><span class="pulse"></span> <b>Drop-ins welcome</b>&nbsp;— no appointment needed. Open now.</div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <h3>We're open &amp; ready to help</h3>
+        <p>Walk in, call, or send a message. Same-day intake available.</p>
+        <div class="hero-hours">
+          <div class="hr-row"><span>Monday – Friday</span><span>8:00 AM – 8:00 PM</span></div>
+          <div class="hr-row"><span>Walk-in assessments</span><span>Anytime</span></div>
+          <div class="hr-row"><span>Insurance</span><span>Medicaid / Medicare</span></div>
+          <div class="hr-row"><span>Accreditation</span><span>CARF Accredited</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust strip -->
+<div class="trust">
+  <div class="wrap">
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> CARF Accredited</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> Medicaid &amp; Medicare</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg> Nonprofit &middot; Community-rooted</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Drop-ins Welcome</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Whole-Person Care</div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <span class="eyebrow">Who We Are</span>
+        <h2 style="font-size:clamp(2rem,3.8vw,2.9rem);margin:.7rem 0 1.2rem">More than treatment — a place to rebuild a life.</h2>
+        <p>Penn North Recovery, a program of Maryland Community Health Initiatives, has served the Pennsylvania Avenue community for more than two decades. We help individuals and families overcome substance use, mental health challenges, poverty, and homelessness.</p>
+        <p>Our approach is <strong>trauma-informed and whole-person</strong>: we treat addiction and co-occurring mental health conditions together, then surround each person with the wellness, employment, and community support they need to stay well.</p>
+        <p>Everyone who walks through our doors is met with respect — no matter where they are in their journey.</p>
+        <a href="#services" class="btn btn-dark" style="margin-top:.6rem">Explore Our Programs →</a>
+      </div>
+      <div class="stats reveal">
+        <div class="stat accent"><b>25+</b><span>Years serving West Baltimore</span></div>
+        <div class="stat"><b>8–8</b><span>Open weekdays, extended hours</span></div>
+        <div class="stat"><b>4+</b><span>Levels of care under one roof</span></div>
+        <div class="stat"><b>100%</b><span>Whole-person, wraparound support</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What We Offer</span>
+      <h2>Care that treats the whole person</h2>
+      <p>From clinical addiction treatment to acupuncture, employment coaching, and community wellness — everything you need to heal, in one place.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg></div>
+        <h3>Addiction Treatment</h3>
+        <p>Evidence-based outpatient and intensive outpatient care for drug and alcohol use disorders.</p>
+        <ul>
+          <li>Individual &amp; group counseling</li>
+          <li>Cognitive behavioral therapy</li>
+          <li>Relapse prevention</li>
+          <li>MAT-friendly &amp; NA meetings</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a3 3 0 106 0M12 2a10 10 0 00-7 17l-1 3 4-1a10 10 0 104-19z"/></svg></div>
+        <h3>Mental Health</h3>
+        <p>Integrated care for co-occurring conditions, delivered with a trauma-informed lens.</p>
+        <ul>
+          <li>Co-occurring disorder treatment</li>
+          <li>Trauma-informed therapy</li>
+          <li>Anger management</li>
+          <li>Motivational interviewing</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M17 7l2-2M5 19l2-2"/></svg></div>
+        <h3>Acudetox &amp; Acupuncture</h3>
+        <p>Auricular acupuncture in a supportive group setting to ease cravings and stress.</p>
+        <ul>
+          <li>Weekly acupuncture</li>
+          <li>Oriental medicine</li>
+          <li>Mind-body healing circles</li>
+          <li>Yoga &amp; meditation</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg></div>
+        <h3>Employment &amp; Reentry</h3>
+        <p>Practical support to help people return to the workforce with a living wage.</p>
+        <ul>
+          <li>Resume &amp; job coaching</li>
+          <li>GED &amp; computer literacy</li>
+          <li>Federal bonding</li>
+          <li>Expungement guidance</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Community &amp; Wellness</h3>
+        <p>Wraparound support that meets basic needs and builds lasting stability.</p>
+        <ul>
+          <li>Food assistance (Maryland Food Bank)</li>
+          <li>Nutrition &amp; cooking classes</li>
+          <li>Smoking cessation</li>
+          <li>HIV/STD testing</li>
+        </ul>
+      </div>
+      <div class="card reveal">
+        <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3>Peer &amp; Family Support</h3>
+        <p>Recovery is stronger together — with peers who've walked the path and families beside you.</p>
+        <ul>
+          <li>Peer recovery specialists</li>
+          <li>Family engagement</li>
+          <li>Life skills training</li>
+          <li>Sober living support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Levels of care -->
+<section class="care" id="care">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Meeting You Where You Are</span>
+      <h2>Levels of care that grow with you</h2>
+      <p>Whether you need intensive daily support or flexible ongoing care, we have a program that fits your life.</p>
+    </div>
+    <div class="levels">
+      <div class="level reveal"><div class="num">LEVEL 01</div><h3>Day Treatment (PHP)</h3><p>Structured, intensive daytime programming for those who need the most support while living at home.</p></div>
+      <div class="level reveal"><div class="num">LEVEL 02</div><h3>Intensive Outpatient (IOP)</h3><p>Several sessions a week of counseling and group therapy that flex around work and family.</p></div>
+      <div class="level reveal"><div class="num">LEVEL 03</div><h3>Outpatient Treatment</h3><p>Ongoing individual and group counseling to maintain and strengthen your recovery over time.</p></div>
+      <div class="level reveal"><div class="num">LEVEL 04</div><h3>Sober Living Support</h3><p>Guidance and connection to safe, supportive housing as you rebuild independence.</p></div>
+      <div class="level reveal"><div class="num">ALONGSIDE</div><h3>Co-Occurring Care</h3><p>Mental health and substance use treated together, never in isolation.</p></div>
+      <div class="level reveal"><div class="num">ALONGSIDE</div><h3>Medication-Assisted</h3><p>MAT-friendly: we support clients prescribed MAT and treat alcohol use disorder.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Wellness -->
+<section class="wellness" id="wellness">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Beyond the Clinic</span>
+      <h2>Whole-person healing</h2>
+      <p>Recovery is about more than stopping — it's about building a healthy, connected, hopeful life. These services come with every program.</p>
+    </div>
+    <div class="pills reveal">
+      <span class="pill"><span>🌿</span> Acupuncture</span>
+      <span class="pill"><span>🧘</span> Yoga &amp; Meditation</span>
+      <span class="pill"><span>🎨</span> Art Therapy</span>
+      <span class="pill"><span>🥗</span> Nutrition Classes</span>
+      <span class="pill"><span>🍎</span> Food Assistance</span>
+      <span class="pill"><span>💪</span> Fitness Equipment</span>
+      <span class="pill"><span>🧠</span> Healing Circles</span>
+      <span class="pill"><span>🚭</span> Smoking Cessation</span>
+      <span class="pill"><span>🩺</span> HIV/STD Testing</span>
+      <span class="pill"><span>🤝</span> Peer Support</span>
+      <span class="pill"><span>👐</span> Massage &amp; Bodywork</span>
+      <span class="pill"><span>🥋</span> Tai Chi</span>
+    </div>
+  </div>
+</section>
+
+<!-- Get started -->
+<section class="start" id="start">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Getting Started</span>
+      <h2>Three simple steps to help</h2>
+      <p>No complicated forms. No judgment. Just support when you're ready.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="n">1</div><h3>Reach out</h3><p>Call, message, or simply walk in. Drop-ins are always welcome during open hours — no appointment required.</p></div>
+      <div class="step reveal"><div class="n">2</div><h3>Get assessed</h3><p>Our team completes a comprehensive, compassionate assessment to understand your needs and build a personalized plan.</p></div>
+      <div class="step reveal"><div class="n">3</div><h3>Begin recovery</h3><p>Start treatment matched to your life, backed by wellness, employment, and community support every step of the way.</p></div>
+    </div>
+    <div style="text-align:center;margin-top:48px" class="reveal">
+      <a href="#contact" class="btn btn-primary">Take the First Step →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="quote">
+  <div class="wrap reveal">
+    <div class="mark" style="width:56px;height:56px">PN</div>
+    <blockquote>"Our mission is to help individuals and communities overcome substance use, poverty, homelessness, and health inequities — restoring dignity, health, and hope."</blockquote>
+    <cite>— Penn North Recovery / Maryland Community Health Initiatives</cite>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow" style="color:var(--gold-soft)">Get In Touch</span>
+          <h2>We're here whenever you're ready</h2>
+          <p style="color:rgba(255,255,255,.78)">Call, visit, or send a message. Every conversation is confidential and judgment-free.</p>
+        </div>
+        <div class="contact-info">
+          <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><b>Call or Text</b><a href="tel:4107282080">410-728-2080</a></div></div>
+          <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Visit Us</b><p>2410 Pennsylvania Avenue, Suite 200<br>Baltimore, MD 21217</p></div></div>
+          <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><b>Email</b><a href="mailto:bmore@penn-north.org">bmore@penn-north.org</a></div></div>
+          <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><b>Hours</b><p>Monday – Friday, 8:00 AM – 8:00 PM<br>Drop-ins welcome anytime</p></div></div>
+          <div class="ci"><div class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h.01M12 12h.01"/></svg></div><div><b>Getting Here</b><p>Penn-North Metro SubwayLink &middot; CityLink LIME bus at Pennsylvania Ave &amp; Cumberland</p></div></div>
+        </div>
+      </div>
+      <div class="form reveal">
+        <h3>Request a callback</h3>
+        <p>Fill this out and our intake team will reach out — usually the same day.</p>
+        <form onsubmit="event.preventDefault();this.querySelector('.done').style.display='block';this.querySelector('.btn').textContent='Sent ✓';">
+          <div class="field"><label>Your name</label><input type="text" placeholder="First name is fine" required></div>
+          <div class="field"><label>Phone number</label><input type="tel" placeholder="(410) 000-0000" required></div>
+          <div class="field"><label>How can we help?</label>
+            <select><option>I'm seeking treatment for myself</option><option>I'm reaching out for a loved one</option><option>Employment / reentry support</option><option>Wellness &amp; community services</option><option>Something else</option></select>
+          </div>
+          <div class="field"><label>Anything you'd like us to know? (optional)</label><textarea rows="3" placeholder="Share as much or as little as you like"></textarea></div>
+          <button type="submit" class="btn btn-primary">Send Request</button>
+          <small class="done" style="display:none;color:var(--gold-soft)">Thank you — this is a demo form. Connect it to your intake system to go live.</small>
+          <small>Confidential &middot; No obligation &middot; We respond quickly</small>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map strip -->
+<div class="mapstrip">
+  <div class="wrap">
+    <div>
+      <h3>2410 Pennsylvania Avenue, Baltimore</h3>
+      <p>In the heart of the Penn North community — right on the Metro line.</p>
+    </div>
+    <a href="https://maps.google.com/?q=2410+Pennsylvania+Avenue+Suite+200+Baltimore+MD+21217" target="_blank" rel="noopener" class="btn btn-dark">Open in Google Maps →</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand"><span class="mark">PN</span><span>Penn North Recovery<small>Maryland Community Health Initiatives</small></span></a>
+        <p>Healing people and restoring community in West Baltimore for more than two decades.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Programs</h4>
+        <a href="#services">Addiction Treatment</a>
+        <a href="#services">Mental Health</a>
+        <a href="#services">Acudetox</a>
+        <a href="#services">Employment &amp; Reentry</a>
+      </div>
+      <div class="foot-col">
+        <h4>About</h4>
+        <a href="#about">Who We Are</a>
+        <a href="#care">Levels of Care</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#start">Get Started</a>
+      </div>
+      <div class="foot-col">
+        <h4>Contact</h4>
+        <a href="tel:4107282080">410-728-2080</a>
+        <a href="mailto:bmore@penn-north.org">bmore@penn-north.org</a>
+        <p>2410 Pennsylvania Ave, Ste 200<br>Baltimore, MD 21217</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Maryland Community Health Initiatives / Penn North Recovery. All rights reserved.</span>
+      <span class="draft">Design concept — draft for review</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
