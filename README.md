@@ -4,9 +4,16 @@ A modern, mobile-first redesign concept for **Penn North Recovery** (Maryland Co
 
 This is a **presentation shell / draft** built to show the owner a cleaner, easier-to-navigate, more modern direction versus the current site at penn-north.com.
 
+## Brand
+Built around Penn North's **real identity**, pulled directly from penn-north.com:
+- **Colors:** their signature orange `#fb6e05` + black + white
+- **Logo:** their actual "PENN NORTH" wordmark (`assets/penn-north-logo.jpg`) and favicon
+- **Baltimore skyline motif** — echoing the skyline silhouette in their logo (recreated as crisp SVG in the hero and footer)
+- **Bold condensed display type** (Anton / Oswald) to match the heavy lettering of the logo
+
 ## Highlights
 - Single-file `index.html` — no build step, deploys anywhere
-- Trauma-informed, hopeful visual language (teal + warm gold)
+- On-brand orange/black/white palette with hopeful, community-rooted tone
 - Clear paths: Services, Levels of Care, Wellness, Get Started, Contact
 - Crisis/help banner (988) always visible
 - Drop-in / walk-in emphasis, callback request form (demo)

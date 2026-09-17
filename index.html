@@ -5,303 +5,297 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Penn North Recovery | Healing People, Restoring Community — Baltimore</title>
 <meta name="description" content="Penn North Recovery is a Baltimore nonprofit providing trauma-informed, whole-person addiction recovery, mental health, and community wellness services. Drop-ins welcome. CARF accredited.">
+<link rel="icon" href="assets/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#12211f;
-  --ink-soft:#3c4f4b;
-  --paper:#fbfaf5;
-  --paper-2:#f2efe4;
-  --teal:#0f5c52;
-  --teal-deep:#0a423b;
-  --teal-bright:#17897a;
-  --gold:#e0a13c;
-  --gold-soft:#f4d79b;
-  --clay:#c25b3a;
-  --line:rgba(15,92,82,.14);
-  --shadow:0 18px 50px -20px rgba(10,66,59,.35);
-  --radius:18px;
+  --ink:#17140f;
+  --ink-soft:#544e46;
+  --paper:#fbfaf7;
+  --paper-2:#f1ece3;
+  --char:#1d1a15;      /* charcoal — dark buttons, headings */
+  --char-deep:#120f0b; /* near-black — dark sections */
+  --orange:#fb6e05;    /* brand primary */
+  --orange-lt:#ff8f3c;
+  --orange-soft:#ffb877;
+  --line:rgba(0,0,0,.10);
+  --shadow:0 18px 50px -22px rgba(30,20,8,.4);
+  --radius:16px;
   --maxw:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{
-  font-family:'Inter',system-ui,sans-serif;
-  color:var(--ink);
-  background:var(--paper);
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;line-height:1.1;font-weight:600;letter-spacing:-.01em}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:'Oswald',sans-serif;line-height:1.08;font-weight:600;letter-spacing:.01em}
+.display{font-family:'Anton',sans-serif;font-weight:400;letter-spacing:.01em;text-transform:uppercase}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-.eyebrow{font-family:'Inter';font-weight:600;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-bright)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:.98rem;padding:.85rem 1.5rem;border-radius:100px;transition:.25s;cursor:pointer;border:none;white-space:nowrap}
-.btn-primary{background:var(--gold);color:var(--teal-deep)}
-.btn-primary:hover{background:#eeb054;transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.4)}
-.btn-ghost:hover{background:rgba(255,255,255,.12)}
-.btn-dark{background:var(--teal);color:#fff}
-.btn-dark:hover{background:var(--teal-deep);transform:translateY(-2px)}
+.eyebrow{font-family:'Oswald';font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:'Oswald';font-weight:600;font-size:1rem;letter-spacing:.03em;text-transform:uppercase;padding:.8rem 1.6rem;border-radius:8px;transition:.25s;cursor:pointer;border:none;white-space:nowrap}
+.btn-primary{background:var(--orange);color:#fff}
+.btn-primary:hover{background:var(--orange-lt);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-dark{background:var(--char);color:#fff}
+.btn-dark:hover{background:#000;transform:translateY(-2px)}
 
-/* ---- Crisis banner ---- */
-.crisis{background:var(--teal-deep);color:#fff;font-size:.86rem;text-align:center;padding:.55rem 24px}
-.crisis strong{color:var(--gold-soft)}
+/* skyline */
+.skyline{display:block;width:100%;height:auto}
+
+/* crisis banner */
+.crisis{background:#000;color:#fff;font-size:.86rem;text-align:center;padding:.55rem 24px}
+.crisis strong{color:var(--orange-soft)}
 .crisis a{border-bottom:1px solid rgba(255,255,255,.4)}
 
-/* ---- Nav ---- */
-header{position:sticky;top:0;z-index:50;background:rgba(251,250,245,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.brand{display:flex;align-items:center;gap:.7rem;font-family:'Fraunces';font-weight:600;font-size:1.28rem;color:var(--teal-deep)}
-.mark{width:40px;height:40px;border-radius:11px;background:linear-gradient(140deg,var(--teal-bright),var(--teal-deep));display:grid;place-items:center;color:var(--gold-soft);font-family:'Fraunces';font-weight:700;font-size:1.15rem;flex:none}
-.brand small{display:block;font-family:'Inter';font-weight:500;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:-2px}
-.navlinks{display:flex;align-items:center;gap:2rem}
-.navlinks a{font-size:.94rem;font-weight:500;color:var(--ink-soft);transition:.2s}
-.navlinks a:hover{color:var(--teal)}
-.navcta{display:flex;align-items:center;gap:1rem}
-.navphone{font-weight:600;color:var(--teal-deep);font-size:.95rem}
-.menu-btn{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--teal-deep)}
-@media(max-width:940px){
-  .navlinks{display:none}
-  .navphone{display:none}
-}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:78px;gap:20px}
+.brand{display:flex;align-items:center;gap:.85rem;min-width:0}
+.brand img{height:44px;width:auto;flex:none}
+.brand .sub{border-left:2px solid var(--orange);padding-left:.85rem;font-family:'Oswald';font-weight:600;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);line-height:1.25;max-width:150px}
+.navlinks{display:flex;align-items:center;gap:1.9rem}
+.navlinks a{font-family:'Oswald';font-weight:500;font-size:.98rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink);transition:.2s}
+.navlinks a:hover{color:var(--orange)}
+.navcta{display:flex;align-items:center;gap:1.1rem}
+.navphone{font-family:'Oswald';font-weight:600;color:var(--char);font-size:1rem}
+@media(max-width:1000px){.navlinks{display:none}.navphone{display:none}.brand .sub{display:none}}
 
-/* ---- Hero ---- */
-.hero{position:relative;background:linear-gradient(160deg,var(--teal-deep) 0%,var(--teal) 55%,#0d6a5e 100%);color:#fff;overflow:hidden}
+/* hero */
+.hero{position:relative;background:linear-gradient(160deg,#000 0%,var(--char-deep) 45%,#241d13 100%);color:#fff;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(circle at 82% 12%,rgba(224,161,60,.22),transparent 42%),
-  radial-gradient(circle at 8% 90%,rgba(23,137,122,.5),transparent 45%);
-  pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:88px 24px 96px}
-.hero-copy .eyebrow{color:var(--gold-soft)}
-.hero h1{font-size:clamp(2.5rem,5.2vw,4rem);margin:1rem 0 1.3rem;font-weight:600}
-.hero h1 em{font-style:normal;color:var(--gold-soft)}
-.hero p.lead{font-size:1.18rem;color:rgba(255,255,255,.85);max-width:34rem;margin-bottom:2.2rem}
+  radial-gradient(circle at 84% 8%,rgba(251,110,5,.35),transparent 40%),
+  radial-gradient(circle at 4% 96%,rgba(251,110,5,.14),transparent 42%);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center;padding:84px 24px 92px}
+.hero-copy .eyebrow{color:var(--orange-soft)}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);margin:1rem 0 1.3rem;line-height:.98}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:1.18rem;color:rgba(255,255,255,.82);max-width:34rem;margin-bottom:2.1rem}
 .hero-cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
-.hero-note{margin-top:1.6rem;font-size:.9rem;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:.5rem}
+.hero-note{margin-top:1.5rem;font-size:.9rem;color:rgba(255,255,255,.72);display:flex;align-items:center;gap:.5rem}
 .hero-note b{color:#fff;font-weight:600}
 .hero-visual{position:relative}
-.hero-card{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(6px);border-radius:22px;padding:30px}
-.hero-card h3{font-size:1.15rem;color:#fff;margin-bottom:.3rem}
-.hero-card p{font-size:.92rem;color:rgba(255,255,255,.75);margin-bottom:1.4rem}
+.hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);backdrop-filter:blur(6px);border-radius:18px;padding:30px}
+.hero-card h3{font-size:1.35rem;color:#fff;margin-bottom:.3rem;text-transform:uppercase;letter-spacing:.02em}
+.hero-card p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.4rem}
 .hero-hours{display:flex;flex-direction:column;gap:.7rem}
 .hr-row{display:flex;justify-content:space-between;align-items:center;font-size:.92rem;padding-bottom:.7rem;border-bottom:1px solid rgba(255,255,255,.12)}
 .hr-row:last-child{border-bottom:none;padding-bottom:0}
-.hr-row span:first-child{color:rgba(255,255,255,.8)}
-.hr-row span:last-child{font-weight:600;color:var(--gold-soft)}
-.pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:#6ee7a8;box-shadow:0 0 0 0 rgba(110,231,168,.7);animation:pulse 2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(110,231,168,.6)}70%{box-shadow:0 0 0 10px rgba(110,231,168,0)}100%{box-shadow:0 0 0 0 rgba(110,231,168,0)}}
-@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding:60px 24px 70px}}
+.hr-row span:first-child{color:rgba(255,255,255,.78)}
+.hr-row span:last-child{font-weight:600;color:var(--orange-soft)}
+.pulse{display:inline-block;width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 0 rgba(74,222,128,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+.hero-skyline{position:relative;line-height:0}
+.hero-skyline svg{width:100%;height:auto;display:block;color:#000}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:34px;padding:56px 24px 64px}}
 
-/* ---- Trust strip ---- */
+/* trust */
 .trust{background:var(--paper-2);border-bottom:1px solid var(--line)}
 .trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;padding:22px 24px}
-.trust-item{display:flex;align-items:center;gap:.7rem;font-size:.9rem;font-weight:500;color:var(--ink-soft)}
-.trust-item svg{flex:none;color:var(--teal)}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-family:'Oswald';font-weight:500;font-size:.92rem;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+.trust-item svg{flex:none;color:var(--orange)}
 
-/* ---- Section base ---- */
+/* sections */
 section{padding:88px 0}
 .sec-head{max-width:44rem;margin-bottom:52px}
 .sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.sec-head h2{font-size:clamp(2rem,3.8vw,2.9rem);margin:.8rem 0 1rem}
-.sec-head p{font-size:1.1rem;color:var(--ink-soft)}
+.sec-head h2{font-size:clamp(2.1rem,4.3vw,3.2rem);margin:.7rem 0 1rem;text-transform:uppercase;line-height:1}
+.sec-head p{font-size:1.1rem;color:var(--ink-soft);font-family:'Inter'}
 
-/* ---- About / stats ---- */
-.about{background:var(--paper)}
+/* about */
 .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+.about-copy h2{font-size:clamp(2.1rem,4.2vw,3rem);margin:.6rem 0 1.2rem;text-transform:uppercase;line-height:1}
 .about-copy p{color:var(--ink-soft);font-size:1.05rem;margin-bottom:1.2rem}
 .about-copy p:first-of-type{font-size:1.18rem;color:var(--ink)}
 .stats{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.stat{background:linear-gradient(160deg,#fff,var(--paper-2));border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
-.stat b{display:block;font-family:'Fraunces';font-size:2.5rem;font-weight:600;color:var(--teal);line-height:1}
-.stat span{display:block;margin-top:.5rem;font-size:.92rem;color:var(--ink-soft)}
-.stat.accent{background:linear-gradient(160deg,var(--teal),var(--teal-deep));border:none}
-.stat.accent b{color:var(--gold-soft)}
+.stat{background:#fff;border:1px solid var(--line);border-left:4px solid var(--orange);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow)}
+.stat b{display:block;font-family:'Anton';font-size:2.8rem;font-weight:400;color:var(--char);line-height:.9}
+.stat span{display:block;margin-top:.6rem;font-size:.92rem;color:var(--ink-soft)}
+.stat.accent{background:linear-gradient(155deg,var(--char),#000);border:none}
+.stat.accent b{color:var(--orange)}
 .stat.accent span{color:rgba(255,255,255,.82)}
 @media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:40px}}
 
-/* ---- Services ---- */
-.services{background:var(--teal-deep);color:#fff;position:relative;overflow:hidden}
-.services::before{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:120%;background:radial-gradient(circle,rgba(23,137,122,.4),transparent 70%)}
+/* services */
+.services{background:var(--char-deep);color:#fff;position:relative;overflow:hidden}
+.services::before{content:"";position:absolute;top:-30%;right:-8%;width:55%;height:110%;background:radial-gradient(circle,rgba(251,110,5,.22),transparent 68%)}
 .services .sec-head h2{color:#fff}
 .services .sec-head p{color:rgba(255,255,255,.78)}
-.services .sec-head .eyebrow{color:var(--gold-soft)}
 .cards{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px 28px;transition:.3s}
-.card:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
-.card .ico{width:52px;height:52px;border-radius:14px;background:rgba(224,161,60,.16);display:grid;place-items:center;margin-bottom:20px;color:var(--gold-soft)}
-.card h3{font-size:1.25rem;color:#fff;margin-bottom:.6rem}
-.card p{font-size:.96rem;color:rgba(255,255,255,.76);margin-bottom:1rem}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:32px 28px;transition:.3s}
+.card:hover{background:rgba(255,255,255,.09);transform:translateY(-4px);border-color:rgba(251,110,5,.5)}
+.card .ico{width:52px;height:52px;border-radius:12px;background:rgba(251,110,5,.16);display:grid;place-items:center;margin-bottom:20px;color:var(--orange)}
+.card h3{font-size:1.35rem;color:#fff;margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.02em}
+.card p{font-size:.96rem;color:rgba(255,255,255,.74);margin-bottom:1rem}
 .card ul{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .card li{font-size:.9rem;color:rgba(255,255,255,.85);display:flex;gap:.5rem;align-items:flex-start}
-.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:.55rem;flex:none}
+.card li::before{content:"";width:6px;height:6px;border-radius:2px;background:var(--orange);margin-top:.5rem;flex:none}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.cards{grid-template-columns:1fr}}
 
-/* ---- Levels of care ---- */
-.care{background:var(--paper)}
+/* care */
 .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.level{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;transition:.25s;position:relative}
-.level:hover{border-color:var(--teal-bright);box-shadow:var(--shadow)}
-.level .num{font-family:'Fraunces';font-size:.85rem;font-weight:600;color:var(--gold);letter-spacing:.05em}
-.level h3{font-size:1.2rem;margin:.5rem 0 .6rem;color:var(--teal-deep)}
+.level{border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;transition:.25s}
+.level:hover{border-color:var(--orange);box-shadow:var(--shadow)}
+.level .num{font-family:'Oswald';font-size:.82rem;font-weight:700;color:var(--orange);letter-spacing:.12em}
+.level h3{font-size:1.3rem;margin:.5rem 0 .6rem;color:var(--char);text-transform:uppercase;letter-spacing:.02em}
 .level p{font-size:.95rem;color:var(--ink-soft)}
 @media(max-width:820px){.levels{grid-template-columns:1fr}}
 
-/* ---- Wellness pills ---- */
+/* wellness */
 .wellness{background:linear-gradient(160deg,var(--paper-2),var(--paper))}
 .pills{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;max-width:52rem;margin:0 auto}
-.pill{background:#fff;border:1px solid var(--line);border-radius:100px;padding:.75rem 1.4rem;font-size:.95rem;font-weight:500;color:var(--teal-deep);display:flex;align-items:center;gap:.55rem;transition:.2s}
-.pill:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.pill{background:#fff;border:1px solid var(--line);border-radius:100px;padding:.7rem 1.35rem;font-family:'Oswald';font-weight:500;font-size:.95rem;letter-spacing:.02em;color:var(--char);display:flex;align-items:center;gap:.55rem;transition:.2s}
+.pill:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
 .pill span{font-size:1.1rem}
 
-/* ---- Steps ---- */
-.start{background:var(--teal);color:#fff}
+/* start */
+.start{background:var(--char);color:#fff}
 .start .sec-head h2{color:#fff}
 .start .sec-head p{color:rgba(255,255,255,.8)}
-.start .sec-head .eyebrow{color:var(--gold-soft)}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:step}
-.step{position:relative;padding-left:0}
-.step .n{width:44px;height:44px;border-radius:12px;background:var(--gold);color:var(--teal-deep);font-family:'Fraunces';font-weight:700;font-size:1.2rem;display:grid;place-items:center;margin-bottom:18px}
-.step h3{font-size:1.2rem;color:#fff;margin-bottom:.5rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.step .n{width:52px;height:52px;border-radius:12px;background:var(--orange);color:#fff;font-family:'Anton';font-size:1.5rem;display:grid;place-items:center;margin-bottom:18px}
+.step h3{font-size:1.35rem;color:#fff;margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.02em}
 .step p{font-size:.96rem;color:rgba(255,255,255,.8)}
 @media(max-width:760px){.steps{grid-template-columns:1fr;gap:22px}}
 
-/* ---- Quote ---- */
+/* quote */
 .quote{background:var(--paper);text-align:center}
-.quote blockquote{max-width:48rem;margin:0 auto;font-family:'Fraunces';font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;color:var(--teal-deep);line-height:1.35}
-.quote .mark{width:56px;height:56px;margin:0 auto 24px;font-size:1.6rem}
-.quote cite{display:block;margin-top:1.6rem;font-family:'Inter';font-style:normal;font-size:.95rem;color:var(--ink-soft);font-weight:500}
+.quote blockquote{max-width:48rem;margin:0 auto;font-family:'Oswald';font-weight:500;font-size:clamp(1.5rem,3vw,2.15rem);color:var(--char);line-height:1.3;text-transform:uppercase;letter-spacing:.01em}
+.quote .barmark{display:inline-block;background:var(--orange);color:#000;font-family:'Anton';font-size:1.3rem;padding:.35rem 1rem;border-radius:6px;margin-bottom:24px;letter-spacing:.03em}
+.quote cite{display:block;margin-top:1.6rem;font-family:'Inter';font-style:normal;font-size:.95rem;color:var(--ink-soft);font-weight:500;text-transform:none}
 
-/* ---- Contact ---- */
-.contact{background:var(--teal-deep);color:#fff}
+/* contact */
+.contact{background:var(--char-deep);color:#fff}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .contact .sec-head h2{color:#fff}
-.contact-info{display:flex;flex-direction:column;gap:1.5rem;margin-top:2rem}
+.contact-info{display:flex;flex-direction:column;gap:1.4rem;margin-top:2rem}
 .ci{display:flex;gap:1rem;align-items:flex-start}
-.ci .ico{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:var(--gold-soft);flex:none}
-.ci b{display:block;font-size:1rem;color:#fff;margin-bottom:.15rem}
+.ci .ico{width:46px;height:46px;border-radius:10px;background:rgba(251,110,5,.14);display:grid;place-items:center;color:var(--orange);flex:none}
+.ci b{display:block;font-family:'Oswald';font-size:1.05rem;color:#fff;margin-bottom:.15rem;text-transform:uppercase;letter-spacing:.03em}
 .ci p,.ci a{font-size:.95rem;color:rgba(255,255,255,.75)}
-.ci a:hover{color:var(--gold-soft)}
+.ci a:hover{color:var(--orange-soft)}
 .form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.13);border-radius:var(--radius);padding:34px}
-.form h3{color:#fff;font-size:1.35rem;margin-bottom:.4rem}
+.form h3{color:#fff;font-size:1.5rem;margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.02em}
 .form>p{font-size:.92rem;color:rgba(255,255,255,.7);margin-bottom:1.6rem}
-.field{margin-bottom:1.1rem}
-.field label{display:block;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:.4rem}
-.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:'Inter';font-size:.95rem}
+.field{margin-bottom:1.05rem}
+.field label{display:block;font-family:'Oswald';font-size:.82rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:.4rem}
+.field input,.field select,.field textarea{width:100%;padding:.8rem 1rem;border-radius:9px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font-family:'Inter';font-size:.95rem}
 .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,.4)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
-.field select option{color:#12211f}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--orange)}
+.field select option{color:#17140f}
 .form .btn-primary{width:100%;justify-content:center;margin-top:.4rem}
 .form small{display:block;margin-top:1rem;font-size:.78rem;color:rgba(255,255,255,.55);text-align:center}
+
 @media(max-width:820px){.contact-grid{grid-template-columns:1fr;gap:40px}}
 
-/* ---- Map strip ---- */
+/* map strip */
 .mapstrip{background:var(--paper-2)}
 .mapstrip .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:34px 24px;flex-wrap:wrap}
-.mapstrip h3{font-size:1.4rem;color:var(--teal-deep)}
+.mapstrip h3{font-size:1.6rem;color:var(--char);text-transform:uppercase}
 .mapstrip p{color:var(--ink-soft);font-size:.98rem}
 
-/* ---- Footer ---- */
-footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
-.foot-brand .brand{color:#fff}
-.foot-brand .mark{background:linear-gradient(140deg,var(--teal-bright),var(--teal))}
+/* footer */
+footer{background:#000;color:rgba(255,255,255,.62);padding:60px 0 30px;position:relative}
+.foot-skyline{line-height:0}
+.foot-skyline svg{width:100%;height:auto;color:var(--orange);opacity:.9}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin:40px 0 44px}
+.foot-brand .fmark{display:inline-block;background:var(--orange);color:#000;font-family:'Anton';font-size:1.4rem;padding:.3rem .8rem;border-radius:6px;letter-spacing:.03em}
 .foot-brand p{margin-top:1.1rem;font-size:.92rem;max-width:20rem}
-.foot-col h4{font-family:'Inter';font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.1rem;font-weight:600}
+.foot-col h4{font-family:'Oswald';font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:1.1rem;font-weight:600}
 .foot-col a,.foot-col p{display:block;font-size:.92rem;color:rgba(255,255,255,.6);margin-bottom:.6rem;transition:.2s}
 .foot-col a:hover{color:#fff}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:rgba(255,255,255,.45)}
-.foot-bottom .draft{color:var(--gold-soft)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.82rem;color:rgba(255,255,255,.45)}
+.foot-bottom .draft{color:var(--orange-soft)}
 @media(max-width:820px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
 @media(max-width:520px){.foot-grid{grid-template-columns:1fr}}
 
-/* reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<!-- Crisis banner -->
 <div class="crisis">
   In crisis or need help now? Call or text <strong>988</strong> (Suicide &amp; Crisis Lifeline) &middot; Maryland Crisis: <strong>211</strong> &middot; Penn North: <a href="tel:4107282080">410-728-2080</a>
 </div>
 
-<!-- Header -->
 <header>
   <div class="wrap">
     <nav>
       <a href="#top" class="brand">
-        <span class="mark">PN</span>
-        <span>Penn North Recovery<small>Maryland Community Health Initiatives</small></span>
+        <img src="assets/penn-north-logo.jpg" alt="Penn North Recovery">
+        <span class="sub">Maryland Community Health Initiatives</span>
       </a>
       <div class="navlinks">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#care">Levels of Care</a>
+        <a href="#care">Care</a>
         <a href="#wellness">Wellness</a>
         <a href="#start">Get Started</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="navcta">
         <a href="tel:4107282080" class="navphone">410-728-2080</a>
-        <a href="#contact" class="btn btn-dark">Get Help Today</a>
+        <a href="#contact" class="btn btn-primary">Get Help</a>
       </div>
     </nav>
   </div>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero" id="top" style="padding:0">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow">Baltimore &middot; Since 1998</span>
-      <h1>Recovery starts here. <em>Community keeps you going.</em></h1>
+      <span class="eyebrow">Baltimore &middot; Pennsylvania Avenue</span>
+      <h1 class="display">Recovery starts here.<br><em>Community keeps you going.</em></h1>
       <p class="lead">A trusted West Baltimore nonprofit offering trauma-informed addiction recovery, mental health care, and whole-person wellness — meeting people where they are, with dignity and hope.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Start Your Recovery →</a>
-        <a href="tel:4107282080" class="btn btn-ghost">📞 Call 410-728-2080</a>
+        <a href="tel:4107282080" class="btn btn-ghost">Call 410-728-2080</a>
       </div>
-      <div class="hero-note"><span class="pulse"></span> <b>Drop-ins welcome</b>&nbsp;— no appointment needed. Open now.</div>
+      <div class="hero-note"><span class="pulse"></span> <b>Drop-ins welcome</b>&nbsp;— no appointment needed.</div>
     </div>
     <div class="hero-visual">
       <div class="hero-card">
         <h3>We're open &amp; ready to help</h3>
         <p>Walk in, call, or send a message. Same-day intake available.</p>
         <div class="hero-hours">
-          <div class="hr-row"><span>Monday – Friday</span><span>8:00 AM – 8:00 PM</span></div>
+          <div class="hr-row"><span>Monday – Friday</span><span>8AM – 8PM</span></div>
           <div class="hr-row"><span>Walk-in assessments</span><span>Anytime</span></div>
           <div class="hr-row"><span>Insurance</span><span>Medicaid / Medicare</span></div>
-          <div class="hr-row"><span>Accreditation</span><span>CARF Accredited</span></div>
+          <div class="hr-row"><span>Accreditation</span><span>CARF</span></div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Baltimore skyline motif (echoes the Penn North logo) -->
+  <div class="hero-skyline" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="#fbfaf7" d="M0,90 L0,60 L40,60 L40,44 L70,44 L70,60 L110,60 L110,30 L128,30 L128,18 L140,18 L140,30 L158,30 L158,60 L200,60 L200,48 L230,48 L230,26 L244,26 L244,14 L258,14 L258,26 L272,26 L272,48 L310,48 L310,38 L340,38 L340,56 L380,56 L380,22 L396,22 L396,8 L410,8 L410,22 L426,22 L426,56 L470,56 L470,42 L500,42 L500,60 L540,60 L540,34 L556,34 L556,50 L600,50 L600,40 L624,40 L624,20 L638,20 L638,40 L662,40 L662,58 L700,58 L700,30 L716,30 L716,16 L730,16 L730,30 L746,30 L746,58 L790,58 L790,46 L820,46 L820,28 L836,28 L836,46 L870,46 L870,60 L910,60 L910,36 L926,36 L926,22 L940,22 L940,36 L956,36 L956,60 L1000,60 L1000,48 L1030,48 L1030,26 L1044,26 L1044,12 L1058,12 L1058,26 L1072,26 L1072,48 L1110,48 L1110,40 L1140,40 L1140,58 L1180,58 L1180,30 L1196,30 L1196,44 L1240,44 L1240,54 L1280,54 L1280,32 L1296,32 L1296,18 L1310,18 L1310,32 L1326,32 L1326,54 L1370,54 L1370,46 L1400,46 L1400,60 L1440,60 L1440,90 Z"/></svg>
+  </div>
 </section>
 
-<!-- Trust strip -->
+<!-- TRUST -->
 <div class="trust">
   <div class="wrap">
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> CARF Accredited</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> Medicaid &amp; Medicare</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg> Nonprofit &middot; Community-rooted</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Drop-ins Welcome</div>
-    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Whole-Person Care</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg> CARF Accredited</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M2 12h20"/></svg> Medicaid &amp; Medicare</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg> Community Nonprofit</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> Drop-ins Welcome</div>
+    <div class="trust-item"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg> Whole-Person Care</div>
   </div>
 </div>
 
-<!-- About -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap">
     <div class="about-grid">
       <div class="about-copy reveal">
         <span class="eyebrow">Who We Are</span>
-        <h2 style="font-size:clamp(2rem,3.8vw,2.9rem);margin:.7rem 0 1.2rem">More than treatment — a place to rebuild a life.</h2>
-        <p>Penn North Recovery, a program of Maryland Community Health Initiatives, has served the Pennsylvania Avenue community for more than two decades. We help individuals and families overcome substance use, mental health challenges, poverty, and homelessness.</p>
+        <h2>More than treatment — a place to rebuild a life.</h2>
+        <p>Penn North Recovery, a program of Maryland Community Health Initiatives, has served the Pennsylvania Avenue community for more than two decades — helping individuals and families overcome substance use, mental health challenges, poverty, and homelessness.</p>
         <p>Our approach is <strong>trauma-informed and whole-person</strong>: we treat addiction and co-occurring mental health conditions together, then surround each person with the wellness, employment, and community support they need to stay well.</p>
         <p>Everyone who walks through our doors is met with respect — no matter where they are in their journey.</p>
         <a href="#services" class="btn btn-dark" style="margin-top:.6rem">Explore Our Programs →</a>
@@ -316,7 +310,7 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
   </div>
 </section>
 
-<!-- Services -->
+<!-- SERVICES -->
 <section class="services" id="services">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -329,73 +323,43 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.35-9.5-8.5C.5 8 3 4 7 4c2 0 3.5 1.5 5 3 1.5-1.5 3-3 5-3 4 0 6.5 4 4.5 8.5C19 16.65 12 21 12 21z"/></svg></div>
         <h3>Addiction Treatment</h3>
         <p>Evidence-based outpatient and intensive outpatient care for drug and alcohol use disorders.</p>
-        <ul>
-          <li>Individual &amp; group counseling</li>
-          <li>Cognitive behavioral therapy</li>
-          <li>Relapse prevention</li>
-          <li>MAT-friendly &amp; NA meetings</li>
-        </ul>
+        <ul><li>Individual &amp; group counseling</li><li>Cognitive behavioral therapy</li><li>Relapse prevention</li><li>MAT-friendly &amp; NA meetings</li></ul>
       </div>
       <div class="card reveal">
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11a3 3 0 106 0M12 2a10 10 0 00-7 17l-1 3 4-1a10 10 0 104-19z"/></svg></div>
         <h3>Mental Health</h3>
         <p>Integrated care for co-occurring conditions, delivered with a trauma-informed lens.</p>
-        <ul>
-          <li>Co-occurring disorder treatment</li>
-          <li>Trauma-informed therapy</li>
-          <li>Anger management</li>
-          <li>Motivational interviewing</li>
-        </ul>
+        <ul><li>Co-occurring disorder treatment</li><li>Trauma-informed therapy</li><li>Anger management</li><li>Motivational interviewing</li></ul>
       </div>
       <div class="card reveal">
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M17 7l2-2M5 19l2-2"/></svg></div>
         <h3>Acudetox &amp; Acupuncture</h3>
         <p>Auricular acupuncture in a supportive group setting to ease cravings and stress.</p>
-        <ul>
-          <li>Weekly acupuncture</li>
-          <li>Oriental medicine</li>
-          <li>Mind-body healing circles</li>
-          <li>Yoga &amp; meditation</li>
-        </ul>
+        <ul><li>Weekly acupuncture</li><li>Oriental medicine</li><li>Mind-body healing circles</li><li>Yoga &amp; meditation</li></ul>
       </div>
       <div class="card reveal">
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/></svg></div>
         <h3>Employment &amp; Reentry</h3>
         <p>Practical support to help people return to the workforce with a living wage.</p>
-        <ul>
-          <li>Resume &amp; job coaching</li>
-          <li>GED &amp; computer literacy</li>
-          <li>Federal bonding</li>
-          <li>Expungement guidance</li>
-        </ul>
+        <ul><li>Resume &amp; job coaching</li><li>GED &amp; computer literacy</li><li>Federal bonding</li><li>Expungement guidance</li></ul>
       </div>
       <div class="card reveal">
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
         <h3>Community &amp; Wellness</h3>
         <p>Wraparound support that meets basic needs and builds lasting stability.</p>
-        <ul>
-          <li>Food assistance (Maryland Food Bank)</li>
-          <li>Nutrition &amp; cooking classes</li>
-          <li>Smoking cessation</li>
-          <li>HIV/STD testing</li>
-        </ul>
+        <ul><li>Food assistance (Maryland Food Bank)</li><li>Nutrition &amp; cooking classes</li><li>Smoking cessation</li><li>HIV/STD testing</li></ul>
       </div>
       <div class="card reveal">
         <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
         <h3>Peer &amp; Family Support</h3>
         <p>Recovery is stronger together — with peers who've walked the path and families beside you.</p>
-        <ul>
-          <li>Peer recovery specialists</li>
-          <li>Family engagement</li>
-          <li>Life skills training</li>
-          <li>Sober living support</li>
-        </ul>
+        <ul><li>Peer recovery specialists</li><li>Family engagement</li><li>Life skills training</li><li>Sober living support</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Levels of care -->
+<!-- CARE -->
 <section class="care" id="care">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -405,7 +369,7 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
     </div>
     <div class="levels">
       <div class="level reveal"><div class="num">LEVEL 01</div><h3>Day Treatment (PHP)</h3><p>Structured, intensive daytime programming for those who need the most support while living at home.</p></div>
-      <div class="level reveal"><div class="num">LEVEL 02</div><h3>Intensive Outpatient (IOP)</h3><p>Several sessions a week of counseling and group therapy that flex around work and family.</p></div>
+      <div class="level reveal"><div class="num">LEVEL 02</div><h3>Intensive Outpatient</h3><p>Several sessions a week of counseling and group therapy that flex around work and family.</p></div>
       <div class="level reveal"><div class="num">LEVEL 03</div><h3>Outpatient Treatment</h3><p>Ongoing individual and group counseling to maintain and strengthen your recovery over time.</p></div>
       <div class="level reveal"><div class="num">LEVEL 04</div><h3>Sober Living Support</h3><p>Guidance and connection to safe, supportive housing as you rebuild independence.</p></div>
       <div class="level reveal"><div class="num">ALONGSIDE</div><h3>Co-Occurring Care</h3><p>Mental health and substance use treated together, never in isolation.</p></div>
@@ -414,7 +378,7 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
   </div>
 </section>
 
-<!-- Wellness -->
+<!-- WELLNESS -->
 <section class="wellness" id="wellness">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -439,11 +403,11 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
   </div>
 </section>
 
-<!-- Get started -->
+<!-- START -->
 <section class="start" id="start">
   <div class="wrap">
     <div class="sec-head center reveal">
-      <span class="eyebrow">Getting Started</span>
+      <span class="eyebrow" style="color:var(--orange-soft)">Getting Started</span>
       <h2>Three simple steps to help</h2>
       <p>No complicated forms. No judgment. Just support when you're ready.</p>
     </div>
@@ -452,28 +416,26 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
       <div class="step reveal"><div class="n">2</div><h3>Get assessed</h3><p>Our team completes a comprehensive, compassionate assessment to understand your needs and build a personalized plan.</p></div>
       <div class="step reveal"><div class="n">3</div><h3>Begin recovery</h3><p>Start treatment matched to your life, backed by wellness, employment, and community support every step of the way.</p></div>
     </div>
-    <div style="text-align:center;margin-top:48px" class="reveal">
-      <a href="#contact" class="btn btn-primary">Take the First Step →</a>
-    </div>
+    <div style="text-align:center;margin-top:48px" class="reveal"><a href="#contact" class="btn btn-primary">Take the First Step →</a></div>
   </div>
 </section>
 
-<!-- Quote -->
+<!-- QUOTE -->
 <section class="quote">
   <div class="wrap reveal">
-    <div class="mark" style="width:56px;height:56px">PN</div>
-    <blockquote>"Our mission is to help individuals and communities overcome substance use, poverty, homelessness, and health inequities — restoring dignity, health, and hope."</blockquote>
+    <span class="barmark">PENN NORTH</span>
+    <blockquote>"Helping individuals and communities overcome substance use, poverty, homelessness, and health inequities — restoring dignity, health, and hope."</blockquote>
     <cite>— Penn North Recovery / Maryland Community Health Initiatives</cite>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="contact-grid">
       <div class="reveal">
         <div class="sec-head" style="margin-bottom:0">
-          <span class="eyebrow" style="color:var(--gold-soft)">Get In Touch</span>
+          <span class="eyebrow">Get In Touch</span>
           <h2>We're here whenever you're ready</h2>
           <p style="color:rgba(255,255,255,.78)">Call, visit, or send a message. Every conversation is confidential and judgment-free.</p>
         </div>
@@ -496,7 +458,7 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
           </div>
           <div class="field"><label>Anything you'd like us to know? (optional)</label><textarea rows="3" placeholder="Share as much or as little as you like"></textarea></div>
           <button type="submit" class="btn btn-primary">Send Request</button>
-          <small class="done" style="display:none;color:var(--gold-soft)">Thank you — this is a demo form. Connect it to your intake system to go live.</small>
+          <small class="done" style="display:none;color:var(--orange-soft)">Thank you — this is a demo form. Connect it to your intake system to go live.</small>
           <small>Confidential &middot; No obligation &middot; We respond quickly</small>
         </form>
       </div>
@@ -504,7 +466,7 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
   </div>
 </section>
 
-<!-- Map strip -->
+<!-- MAP STRIP -->
 <div class="mapstrip">
   <div class="wrap">
     <div>
@@ -515,34 +477,20 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
   </div>
 </div>
 
-<!-- Footer -->
+<!-- FOOTER -->
 <footer>
+  <div class="foot-skyline" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M0,60 L0,40 L40,40 L40,28 L70,28 L70,40 L110,40 L110,18 L128,18 L128,10 L140,10 L140,18 L158,18 L158,40 L200,40 L200,30 L230,30 L230,14 L244,14 L244,6 L258,6 L258,14 L272,14 L272,30 L310,30 L310,24 L340,24 L340,38 L380,38 L380,12 L396,12 L396,4 L410,4 L410,12 L426,12 L426,38 L470,38 L470,26 L500,26 L500,40 L540,40 L540,20 L556,20 L556,32 L600,32 L600,24 L624,24 L624,12 L638,12 L638,24 L662,24 L662,38 L700,38 L700,16 L716,16 L716,8 L730,8 L730,16 L746,16 L746,38 L790,38 L790,28 L820,28 L820,16 L836,16 L836,28 L870,28 L870,40 L910,40 L910,22 L926,22 L926,12 L940,12 L940,22 L956,22 L956,40 L1000,40 L1000,30 L1030,30 L1030,14 L1044,14 L1044,6 L1058,6 L1058,14 L1072,14 L1072,30 L1110,30 L1110,24 L1140,24 L1140,38 L1180,38 L1180,16 L1196,16 L1196,28 L1240,28 L1240,36 L1280,36 L1280,18 L1296,18 L1296,8 L1310,8 L1310,18 L1326,18 L1326,36 L1370,36 L1370,28 L1400,28 L1400,40 L1440,40 L1440,60 Z"/></svg>
+  </div>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="#top" class="brand"><span class="mark">PN</span><span>Penn North Recovery<small>Maryland Community Health Initiatives</small></span></a>
+        <span class="fmark">PENN NORTH</span>
         <p>Healing people and restoring community in West Baltimore for more than two decades.</p>
       </div>
-      <div class="foot-col">
-        <h4>Programs</h4>
-        <a href="#services">Addiction Treatment</a>
-        <a href="#services">Mental Health</a>
-        <a href="#services">Acudetox</a>
-        <a href="#services">Employment &amp; Reentry</a>
-      </div>
-      <div class="foot-col">
-        <h4>About</h4>
-        <a href="#about">Who We Are</a>
-        <a href="#care">Levels of Care</a>
-        <a href="#wellness">Wellness</a>
-        <a href="#start">Get Started</a>
-      </div>
-      <div class="foot-col">
-        <h4>Contact</h4>
-        <a href="tel:4107282080">410-728-2080</a>
-        <a href="mailto:bmore@penn-north.org">bmore@penn-north.org</a>
-        <p>2410 Pennsylvania Ave, Ste 200<br>Baltimore, MD 21217</p>
-      </div>
+      <div class="foot-col"><h4>Programs</h4><a href="#services">Addiction Treatment</a><a href="#services">Mental Health</a><a href="#services">Acudetox</a><a href="#services">Employment &amp; Reentry</a></div>
+      <div class="foot-col"><h4>About</h4><a href="#about">Who We Are</a><a href="#care">Levels of Care</a><a href="#wellness">Wellness</a><a href="#start">Get Started</a></div>
+      <div class="foot-col"><h4>Contact</h4><a href="tel:4107282080">410-728-2080</a><a href="mailto:bmore@penn-north.org">bmore@penn-north.org</a><p>2410 Pennsylvania Ave, Ste 200<br>Baltimore, MD 21217</p></div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Maryland Community Health Initiatives / Penn North Recovery. All rights reserved.</span>
@@ -552,7 +500,6 @@ footer{background:#0a1f1c;color:rgba(255,255,255,.65);padding:64px 0 32px}
 </footer>
 
 <script>
-// scroll reveal
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
